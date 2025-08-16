@@ -1,0 +1,332 @@
+/* Ultra-Professional Building Architecture System */
+
+/* Master Building Container */
+.ultra-building-system {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+
+/* Premium Building Base Class */
+.ultra-building {
+    position: absolute;
+    bottom: 0;
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+}
+
+.ultra-building:hover {
+    transform: scale3d(1.02, 1.02, 1.02) rotateY(2deg);
+    filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+}
+
+/* Skyscraper: The Apex Tower */
+.apex-tower {
+    width: 120px;
+    height: 400px;
+    left: 15%;
+    background: linear-gradient(145deg, 
+        #1a1a2e 0%, 
+        #16213e 25%, 
+        #0f3460 50%, 
+        #533483 75%, 
+        #e43c5c 100%);
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.apex-tower::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.1) 50%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, rgba(135, 206, 235, 0.1) 50%, transparent 100%);
+    animation: building-shimmer 8s ease-in-out infinite;
+}
+
+@keyframes building-shimmer {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Spire System */
+.apex-spire {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 40px solid #FFD700;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+}
+
+.apex-spire::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: -2px;
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(0deg, #FF6B6B, #FFD700);
+    border-radius: 2px;
+    animation: spire-beacon 2s ease-in-out infinite;
+}
+
+@keyframes spire-beacon {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        transform: scale(1);
+    }
+    50% { 
+        box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+        transform: scale(1.2);
+    }
+}
+
+/* Advanced Window System */
+.ultra-windows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 3px;
+    padding: 10px;
+}
+
+.ultra-window {
+    background: linear-gradient(45deg, 
+        rgba(255, 215, 0, 0.8) 0%, 
+        rgba(255, 165, 0, 0.9) 50%, 
+        rgba(255, 140, 0, 1) 100%);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    animation: window-flicker 4s ease-in-out infinite;
+    animation-delay: calc(var(--window-delay, 0) * 0.1s);
+}
+
+.ultra-window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+}
+
+.ultra-window::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes window-flicker {
+    0%, 90% { opacity: 1; }
+    95% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Glass Tower: Crystal Pinnacle */
+.crystal-pinnacle {
+    width: 100px;
+    height: 480px;
+    left: 35%;
+    background: linear-gradient(145deg, 
+        rgba(135, 206, 235, 0.2) 0%, 
+        rgba(0, 191, 255, 0.3) 25%, 
+        rgba(30, 144, 255, 0.4) 50%, 
+        rgba(65, 105, 225, 0.5) 75%, 
+        rgba(138, 43, 226, 0.6) 100%);
+    border-radius: 0 0 6px 6px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(135, 206, 235, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.crystal-pinnacle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(90deg, 
+            transparent 0px, 
+            rgba(255, 255, 255, 0.1) 2px, 
+            transparent 4px, 
+            transparent 20px),
+        repeating-linear-gradient(0deg, 
+            transparent 0px, 
+            rgba(255, 255, 255, 0.05) 2px, 
+            transparent 4px, 
+            transparent 15px);
+    animation: glass-reflection 6s linear infinite;
+}
+
+@keyframes glass-reflection {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Holographic Display System */
+.holographic-display {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    height: 30%;
+    background: linear-gradient(45deg, 
+        rgba(0, 255, 255, 0.1), 
+        rgba(255, 0, 255, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    border-radius: 4px;
+    animation: holographic-flicker 3s ease-in-out infinite;
+}
+
+@keyframes holographic-flicker {
+    0%, 100% { 
+        opacity: 0.8; 
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+    50% { 
+        opacity: 1; 
+        box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+    }
+}
+
+/* Mega Tower: Titan Complex */
+.titan-complex {
+    width: 140px;
+    height: 520px;
+    left: 55%;
+    background: linear-gradient(145deg, 
+        #2d1b69 0%, 
+        #11998e 25%, 
+        #38ef7d 50%, 
+        #ffd700 75%, 
+        #ff6b6b 100%);
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.titan-complex::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        conic-gradient(from 0deg at 50% 50%, 
+            transparent 0deg, 
+            rgba(255, 215, 0, 0.2) 90deg, 
+            transparent 180deg, 
+            rgba(135, 206, 235, 0.2) 270deg, 
+            transparent 360deg);
+    animation: titan-energy-rotation 12s linear infinite;
+}
+
+@keyframes titan-energy-rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Advanced LED Strip System */
+.led-strip-system {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.led-strip {
+    position: absolute;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #00ffff 25%, 
+        #ff00ff 50%, 
+        #ffff00 75%, 
+        transparent 100%);
+    animation: led-flow 2s linear infinite;
+}
+
+.led-strip.horizontal {
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+.led-strip.vertical {
+    top: 0;
+    bottom: 0;
+    width: 2px;
+}
+
+@keyframes led-flow {
+    0% { 
+        opacity: 0.3; 
+        filter: hue-rotate(0deg);
+    }
+    50% { 
+        opacity: 1; 
+        filter: hue-rotate(180deg);
+    }
+    100% { 
+        opacity: 0.3; 
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Building Connections */
+.building-connection {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 215, 0, 0.8) 50%, 
+        transparent 100%);
+    animation: connection-pulse 3s ease-in-out infinite;
+}
+
+@keyframes connection-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ultra-building {
+        transform: scale(0.8);
+    }
+    
+    .apex-tower, .crystal-pinnacle, .titan-complex {
+        width: 80px;
+        height: 300px;
+    }
+}

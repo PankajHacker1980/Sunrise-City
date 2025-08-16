@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Awakening - An Interactive Sunrise Experience</title>
+    <meta name="description" content="Experience a city waking up at sunrise through an immersive, interactive web experience">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="advanced-animations.css">
+    <link rel="stylesheet" href="ultra-buildings.css">
+    <link rel="stylesheet" href="creative-effects.css">
+    
+    <!-- Professional Graphics Assets -->
+    <style>
+        /* Inline critical SVG styles for performance */
+        .icon { width: 24px; height: 24px; fill: currentColor; }
+        .icon-large { width: 48px; height: 48px; fill: currentColor; }
+        .geometric-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: -1; }
+    </style>
+</head>
+<body>
+    <!-- Ultra-Professional Loading Screen -->
+    <div id="loading-screen" class="ultra-loading-screen">
+        <div class="ultra-loading-logo">
+            <div class="loading-orb"></div>
+            <div class="loading-orb"></div>
+            <div class="loading-orb"></div>
+            <div class="loading-core"></div>
+        </div>
+        <div class="loading-text">
+            <h2 class="holographic-text">City Awakening</h2>
+            <p class="neon-glow">Initializing Ultra-Professional Experience...</p>
+            <div class="loading-progress">
+                <div class="progress-bar gradient-aurora"></div>
+            </div>
+        </div>
+        
+        <!-- Cosmic Particles Background -->
+        <div class="cosmic-particles"></div>
+        
+        <!-- Ultra Sky System -->
+        <div class="ultra-sky-system"></div>
+    </div>
+
+    <!-- Main container -->
+    <div id="main-container">
+        <!-- Ultra Sky System -->
+        <div id="sky-background" class="ultra-sky-system"></div>
+        
+        <!-- Premium Scroll Indicator -->
+        <div class="premium-scroll-indicator">
+            <div style="width: 0%; transition: width 0.3s ease;"></div>
+        </div>
+        
+        <!-- Floating Particles -->
+        <div class="floating-particles"></div>
+        
+        <!-- Stars layer (disappears with sunrise) -->
+        <div id="stars-layer">
+            <div class="star" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+            <div class="star" style="left: 20%; top: 15%; animation-delay: 0.5s;"></div>
+            <div class="star" style="left: 30%; top: 25%; animation-delay: 1s;"></div>
+            <div class="star" style="left: 45%; top: 10%; animation-delay: 1.5s;"></div>
+            <div class="star" style="left: 60%; top: 18%; animation-delay: 2s;"></div>
+            <div class="star" style="left: 75%; top: 22%; animation-delay: 2.5s;"></div>
+            <div class="star" style="left: 85%; top: 12%; animation-delay: 3s;"></div>
+            <div class="star" style="left: 95%; top: 28%; animation-delay: 3.5s;"></div>
+        </div>
+
+        <!-- Sun/Moon -->
+        <div id="celestial-body">
+            <div id="moon"></div>
+            <div id="sun"></div>
+        </div>
+
+        <!-- Clouds layer -->
+        <div id="clouds-layer">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <!-- Birds -->
+        <div id="birds-container">
+            <svg class="bird" viewBox="0 0 100 100" style="left: 20%; top: 30%;">
+                <path d="M20,50 Q30,40 50,50 Q70,40 80,50 Q70,60 50,50 Q30,60 20,50" fill="currentColor"/>
+            </svg>
+            <svg class="bird" viewBox="0 0 100 100" style="left: 60%; top: 25%;">
+                <path d="M20,50 Q30,40 50,50 Q70,40 80,50 Q70,60 50,50 Q30,60 20,50" fill="currentColor"/>
+            </svg>
+            <svg class="bird" viewBox="0 0 100 100" style="left: 80%; top: 35%;">
+                <path d="M20,50 Q30,40 50,50 Q70,40 80,50 Q70,60 50,50 Q30,60 20,50" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <!-- Ultra-Professional City Skyline -->
+        <div id="city-skyline" class="ultra-building-system">
+            <!-- Background buildings -->
+            <div class="building-layer background-buildings">
+                <div class="building modern-tower" style="left: 5%; height: 35%;">
+                    <div class="building-facade">
+                        <div class="building-crown"></div>
+                        <div class="window-grid">
+                            <div class="window professional-window" style="left: 15%; top: 15%;"></div>
+                            <div class="window professional-window" style="left: 35%; top: 15%;"></div>
+                            <div class="window professional-window" style="left: 55%; top: 15%;"></div>
+                            <div class="window professional-window" style="left: 75%; top: 15%;"></div>
+                            <div class="window professional-window" style="left: 15%; top: 35%;"></div>
+                            <div class="window professional-window" style="left: 35%; top: 35%;"></div>
+                            <div class="window professional-window" style="left: 55%; top: 35%;"></div>
+                            <div class="window professional-window" style="left: 75%; top: 35%;"></div>
+                        </div>
+                        <div class="building-edge-light"></div>
+                    </div>
+                </div>
+                
+                <div class="building glass-tower" style="left: 18%; height: 42%;">
+                    <div class="building-facade glass-facade">
+                        <div class="glass-panels">
+                            <div class="glass-panel" style="left: 0%; width: 20%;"></div>
+                            <div class="glass-panel" style="left: 20%; width: 20%;"></div>
+                            <div class="glass-panel" style="left: 40%; width: 20%;"></div>
+                            <div class="glass-panel" style="left: 60%; width: 20%;"></div>
+                            <div class="glass-panel" style="left: 80%; width: 20%;"></div>
+                        </div>
+                        <div class="building-antenna"></div>
+                    </div>
+                </div>
+                
+                <div class="building corporate-tower" style="left: 32%; height: 38%;">
+                    <div class="building-facade">
+                        <div class="corner-lights">
+                            <div class="corner-light left"></div>
+                            <div class="corner-light right"></div>
+                        </div>
+                        <div class="window-rows">
+                            <div class="window-row">
+                                <div class="window professional-window"></div>
+                                <div class="window professional-window"></div>
+                                <div class="window professional-window"></div>
+                            </div>
+                            <div class="window-row">
+                                <div class="window professional-window"></div>
+                                <div class="window professional-window"></div>
+                                <div class="window professional-window"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Midground buildings with sharp architectural details -->
+            <div class="building-layer midground-buildings">
+                <div class="building skyscraper" style="left: 42%; height: 58%;">
+                    <div class="building-facade modern-facade">
+                        <div class="building-top-detail"></div>
+                        <div class="vertical-strips">
+                            <div class="vertical-strip"></div>
+                            <div class="vertical-strip"></div>
+                            <div class="vertical-strip"></div>
+                        </div>
+                        <div class="window-grid precision-grid">
+                            <div class="window professional-window" style="left: 8%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 23%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 38%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 53%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 68%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 83%; top: 12%;"></div>
+                            <div class="window professional-window" style="left: 8%; top: 28%;"></div>
+                            <div class="window professional-window" style="left: 23%; top: 28%;"></div>
+                            <div class="window professional-window" style="left: 38%; top: 28%;"></div>
+                            <div class="window professional-window" style="left: 53%; top: 28%;"></div>
+                            <div class="window professional-window" style="left: 68%; top: 28%;"></div>
+                            <div class="window professional-window" style="left: 83%; top: 28%;"></div>
+                        </div>
+                        <div class="led-strips">
+                            <div class="led-strip horizontal" style="top: 45%;"></div>
+                            <div class="led-strip vertical" style="left: 30%;"></div>
+                            <div class="led-strip vertical" style="left: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="building art-deco" style="left: 62%; height: 48%;">
+                    <div class="building-facade art-deco-facade">
+                        <div class="art-deco-crown">
+                            <div class="crown-tier" style="width: 80%;"></div>
+                            <div class="crown-tier" style="width: 60%;"></div>
+                            <div class="crown-tier" style="width: 40%;"></div>
+                        </div>
+                        <div class="ornamental-details">
+                            <div class="detail-line" style="top: 25%;"></div>
+                            <div class="detail-line" style="top: 50%;"></div>
+                            <div class="detail-line" style="top: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foreground buildings with premium details -->
+            <div class="building-layer foreground-buildings">
+                <div class="building flagship-tower" style="left: 72%; height: 75%;">
+                    <div class="building-facade flagship-facade">
+                        <div class="spire">
+                            <div class="spire-section" style="height: 8%;"></div>
+                            <div class="spire-section" style="height: 6%;"></div>
+                            <div class="spire-light"></div>
+                        </div>
+                        <div class="premium-windows">
+                            <div class="window-section" style="top: 8%;">
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                            </div>
+                            <div class="window-section" style="top: 22%;">
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                                <div class="window professional-window luxury"></div>
+                            </div>
+                        </div>
+                        <div class="building-logo">
+                            <div class="logo-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="building tech-tower" style="left: 88%; height: 65%;">
+                    <div class="building-facade tech-facade">
+                        <div class="digital-displays">
+                            <div class="display main-display"></div>
+                            <div class="display side-display"></div>
+                        </div>
+                        <div class="tech-details">
+                            <div class="circuit-line" style="top: 30%;"></div>
+                            <div class="circuit-line" style="top: 60%;"></div>
+                            <div class="data-ports">
+                                <div class="port"></div>
+                                <div class="port"></div>
+                                <div class="port"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Street lights -->
+        <div id="streetlights">
+            <div class="streetlight" style="left: 10%;">
+                <div class="light-pole"></div>
+                <div class="light-bulb"></div>
+                <div class="light-glow"></div>
+            </div>
+            <div class="streetlight" style="left: 25%;">
+                <div class="light-pole"></div>
+                <div class="light-bulb"></div>
+                <div class="light-glow"></div>
+            </div>
+            <div class="streetlight" style="left: 45%;">
+                <div class="light-pole"></div>
+                <div class="light-bulb"></div>
+                <div class="light-glow"></div>
+            </div>
+            <div class="streetlight" style="left: 65%;">
+                <div class="light-pole"></div>
+                <div class="light-bulb"></div>
+                <div class="light-glow"></div>
+            </div>
+            <div class="streetlight" style="left: 85%;">
+                <div class="light-pole"></div>
+                <div class="light-bulb"></div>
+                <div class="light-glow"></div>
+            </div>
+        </div>
+
+        <!-- Content sections -->
+        <section id="hero-section" class="content-section">
+            <div class="content-container">
+                <h1 class="hero-title ultra-title" data-text="City Awakening">City Awakening</h1>
+                <p class="hero-subtitle">Experience the poetry of dawn as the city slowly comes to life</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to witness the sunrise</span>
+                    <svg class="scroll-icon" viewBox="0 0 24 48">
+                        <rect x="10" y="8" width="4" height="32" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="16" r="2" fill="currentColor">
+                            <animate attributeName="cy" values="16;28;16" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="dawn-section" class="content-section">
+            <div class="content-container">
+                <h2 class="section-title">The Dawn Breaks</h2>
+                <p class="section-text">As the first light touches the horizon, the city begins its gentle awakening. Windows start to glow, streetlights prepare to rest, and the sky paints itself in hues of gold and amber.</p>
+                <div id="live-data-container">
+                    <div class="data-card ultra-premium-card glass-morphism tilt-effect">
+                        <div class="card-header">
+                            <svg class="icon card-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            <h3>Local Time</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="current-time" class="data-value holographic-text">--:--</div>
+                            <div class="data-label">Current Time</div>
+                        </div>
+                        <div class="card-accent gradient-aurora"></div>
+                    </div>
+                    
+                    <div class="data-card ultra-premium-card glass-morphism tilt-effect">
+                        <div class="card-header">
+                            <svg class="icon card-icon" viewBox="0 0 24 24">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                            </svg>
+                            <h3>Weather</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="weather-info" class="data-value holographic-text">Loading...</div>
+                            <div class="data-label">Current Conditions</div>
+                        </div>
+                        <div class="card-accent gradient-aurora"></div>
+                    </div>
+                    
+                    <div class="data-card ultra-premium-card glass-morphism tilt-effect">
+                        <div class="card-header">
+                            <svg class="icon card-icon" viewBox="0 0 24 24">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <h3>Air Quality</h3>
+                        </div>
+                        <div class="card-content">
+                            <div id="air-quality" class="data-value holographic-text">--</div>
+                            <div class="data-label">Air Quality Index</div>
+                        </div>
+                        <div class="card-accent gradient-aurora"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="morning-section" class="content-section">
+            <div class="content-container">
+                <h2 class="section-title">Morning Embrace</h2>
+                <p class="section-text">The city is now fully awake, bathed in the warm embrace of morning light. Each building tells a story, each window holds a dream, and the symphony of urban life begins anew.</p>
+                <div class="interaction-prompt">
+                    <p>Move your cursor around to interact with the scene</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
